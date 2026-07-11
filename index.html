@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Launch3D Studio: experiencias publicitarias 3D interactivas para productos físicos, pensadas para automoción, retail premium y campañas de lanzamiento."
+  />
+  <title>Launch3D Studio | Campañas publicitarias 3D interactivas</title>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="Ir al inicio">
+      <span class="brand-mark">L3D</span>
+      <span class="brand-name">Launch3D Studio</span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" data-nav-toggle>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="main-nav" data-nav>
+      <a href="#problem">Problema</a>
+      <a href="#solution">Solución</a>
+      <a href="#automotive">Automoción</a>
+      <a href="#features">Funcionalidades</a>
+      <a href="#roadmap">Roadmap</a>
+      <a class="nav-cta" href="#demo">Demo futura</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero section">
+      <div class="hero-content reveal">
+        <p class="eyebrow">Publicidad interactiva · 3D · Producto digital</p>
+        <h1>Campañas 3D interactivas para vender productos que necesitan ser explorados.</h1>
+        <p class="hero-lead">
+          Launch3D Studio convierte una landing tradicional en una experiencia publicitaria:
+          producto explorable, hotspots, storytelling, personalización visual, llamadas a la acción
+          y métricas de interacción.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#demo">Ver propuesta de demo</a>
+          <a class="button button-secondary" href="#solution">Entender el producto</a>
+        </div>
+
+        <div class="hero-proof">
+          <div>
+            <strong>01</strong>
+            <span>Landing de validación</span>
+          </div>
+          <div>
+            <strong>B2B</strong>
+            <span>Marcas, concesionarios y agencias</span>
+          </div>
+          <div>
+            <strong>3D-ready</strong>
+            <span>Preparado para evolucionar a WebGL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="Mockup visual de una experiencia 3D de producto">
+        <div class="product-stage">
+          <div class="stage-glow"></div>
+
+          <div class="car-card">
+            <div class="car-topbar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="pseudo-3d-car" data-car>
+              <div class="car-body"></div>
+              <div class="car-roof"></div>
+              <div class="car-window"></div>
+              <div class="car-light car-light-left"></div>
+              <div class="car-light car-light-right"></div>
+              <div class="wheel wheel-left"></div>
+              <div class="wheel wheel-right"></div>
+              <button class="hotspot hotspot-1" type="button" data-hotspot="Diseño frontal">+</button>
+              <button class="hotspot hotspot-2" type="button" data-hotspot="Acabado premium">+</button>
+              <button class="hotspot hotspot-3" type="button" data-hotspot="Llantas personalizables">+</button>
+            </div>
+
+            <div class="config-panel">
+              <span>Color visual</span>
+              <div class="color-options" aria-label="Selector visual de color">
+                <button class="color-dot is-active" type="button" aria-label="Color grafito" data-color="graphite"></button>
+                <button class="color-dot" type="button" aria-label="Color azul eléctrico" data-color="electric"></button>
+                <button class="color-dot" type="button" aria-label="Color bronce" data-color="bronze"></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="floating-panel panel-left">
+            <span class="metric-value">68%</span>
+            <span class="metric-label">usuarios exploran hotspots</span>
+          </div>
+
+          <div class="floating-panel panel-right">
+            <span class="metric-value">+CTA</span>
+            <span class="metric-label">lead tras interacción</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section id="problem" class="section split-section">
+      <div class="section-copy reveal">
+        <p class="eyebrow">El problema</p>
+        <h2>Muchas landings de producto siguen funcionando como folletos digitales.</h2>
+      </div>
+
+      <div class="problem-grid reveal">
+        <article class="problem-card">
+          <span class="card-index">01</span>
+          <h3>Producto difícil de entender</h3>
+          <p>
+            Las imágenes y vídeos ayudan, pero no siempre explican bien dimensiones,
+            variantes, detalles técnicos o diferencias entre versiones.
+          </p>
+        </article>
+
+        <article class="problem-card">
+          <span class="card-index">02</span>
+          <h3>Poca interacción útil</h3>
+          <p>
+            El usuario mira, hace scroll y quizá rellena un formulario. La marca obtiene
+            pocos datos sobre qué elementos generan interés real.
+          </p>
+        </article>
+
+        <article class="problem-card">
+          <span class="card-index">03</span>
+          <h3>Campañas poco memorables</h3>
+          <p>
+            En productos visuales o premium, una landing genérica reduce percepción de valor
+            y hace que la campaña se parezca demasiado a la competencia.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SOLUTION -->
+    <section id="solution" class="section solution-section">
+      <div class="section-header reveal">
+        <p class="eyebrow">La solución</p>
+        <h2>Una experiencia publicitaria interactiva, no solo un configurador.</h2>
+        <p>
+          Launch3D Studio plantea una capa web para campañas donde el usuario explora
+          el producto, descubre argumentos comerciales y avanza hacia una conversión medible.
+        </p>
+      </div>
+
+      <div class="solution-flow reveal">
+        <div class="flow-step">
+          <span>Explorar</span>
+          <p>Modelo 3D o pseudo-3D con navegación visual guiada.</p>
+        </div>
+        <div class="flow-line"></div>
+        <div class="flow-step">
+          <span>Descubrir</span>
+          <p>Hotspots con beneficios, detalles técnicos y narrativa de campaña.</p>
+        </div>
+        <div class="flow-line"></div>
+        <div class="flow-step">
+          <span>Personalizar</span>
+          <p>Colores, acabados o variantes relevantes para aumentar intención.</p>
+        </div>
+        <div class="flow-line"></div>
+        <div class="flow-step">
+          <span>Convertir</span>
+          <p>CTA contextual: solicitar info, reservar demo o enviar lead comercial.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUTOMOTIVE USE CASE -->
+    <section id="automotive" class="section automotive-section">
+      <div class="automotive-showcase reveal">
+        <div class="showcase-copy">
+          <p class="eyebrow">Primer caso de uso</p>
+          <h2>Lanzamiento digital de un compacto premium ficticio.</h2>
+          <p>
+            La primera demo no usará marcas reales. El objetivo será simular una campaña
+            para un vehículo urbano premium, con estética cuidada, personalización visual
+            y argumentos comerciales integrados en la exploración.
+          </p>
+
+          <ul class="check-list">
+            <li>Vista hero del coche con estética publicitaria.</li>
+            <li>Hotspots para diseño, interior, tecnología y eficiencia.</li>
+            <li>Cambios visuales simples: color, acabado o ambiente.</li>
+            <li>CTA final para solicitar información o reservar una prueba.</li>
+          </ul>
+        </div>
+
+        <div class="showcase-card">
+          <div class="campaign-label">Concept campaign</div>
+          <h3>Urban Pulse GT</h3>
+          <p>Compacto premium ficticio para demostrar experiencia, narrativa y captación.</p>
+
+          <div class="spec-grid">
+            <div>
+              <span>Formato</span>
+              <strong>Web landing</strong>
+            </div>
+            <div>
+              <span>Interacción</span>
+              <strong>Hotspots</strong>
+            </div>
+            <div>
+              <span>Visual</span>
+              <strong>Pseudo-3D</strong>
+            </div>
+            <div>
+              <span>Objetivo</span>
+              <strong>Lead</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="section">
+      <div class="section-header reveal">
+        <p class="eyebrow">Funcionalidades principales</p>
+        <h2>Lo justo para validar el producto sin sobredimensionar el proyecto.</h2>
+        <p>
+          La primera versión debe demostrar valor comercial y criterio de diseño.
+          El desarrollo técnico avanzado vendrá después.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card reveal">
+          <div class="feature-icon">3D</div>
+          <h3>Escena visual de producto</h3>
+          <p>
+            Primero pseudo-3D con HTML/CSS/JS y assets renderizados. Más adelante,
+            integración real con Three.js si la validación lo justifica.
+          </p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-icon">+</div>
+          <h3>Hotspots narrativos</h3>
+          <p>
+            Puntos interactivos que convierten características en argumentos de campaña:
+            diseño, materiales, tecnología, rendimiento o uso.
+          </p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-icon">◐</div>
+          <h3>Personalización visual</h3>
+          <p>
+            Cambios simples de color o acabado para que el usuario sienta control
+            sin construir todavía un configurador complejo.
+          </p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-icon">CTA</div>
+          <h3>Conversión contextual</h3>
+          <p>
+            Llamadas a la acción integradas después de la exploración:
+            solicitar información, reservar demo o contactar con ventas.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- METRICS -->
+    <section id="metrics" class="section metrics-section">
+      <div class="section-copy reveal">
+        <p class="eyebrow">Métricas para empresas</p>
+        <h2>La interacción también debe producir señales comerciales.</h2>
+        <p>
+          No basta con que la experiencia sea atractiva. La marca necesita saber qué despierta
+          interés, qué variantes se eligen y dónde aparece la intención de compra.
+        </p>
+      </div>
+
+      <div class="metrics-dashboard reveal">
+        <div class="dashboard-top">
+          <span>Campaign analytics</span>
+          <span>Prototype</span>
+        </div>
+
+        <div class="metric-row">
+          <span>Hotspots vistos</span>
+          <strong>1.284</strong>
+        </div>
+        <div class="metric-bar">
+          <span style="width: 82%"></span>
+        </div>
+
+        <div class="metric-row">
+          <span>Colores probados</span>
+          <strong>743</strong>
+        </div>
+        <div class="metric-bar">
+          <span style="width: 64%"></span>
+        </div>
+
+        <div class="metric-row">
+          <span>Clics en CTA</span>
+          <strong>196</strong>
+        </div>
+        <div class="metric-bar">
+          <span style="width: 38%"></span>
+        </div>
+
+        <div class="dashboard-note">
+          En la primera landing estos datos serán simulados. En una fase posterior podrían
+          registrarse con eventos de JavaScript, analítica web o backend ligero.
+        </div>
+      </div>
+    </section>
+
+    <!-- ROADMAP + STACK -->
+    <section id="roadmap" class="section roadmap-stack-section">
+      <div class="roadmap reveal">
+        <p class="eyebrow">Roadmap realista</p>
+        <h2>Construcción por capas.</h2>
+
+        <ol class="timeline">
+          <li>
+            <span>Fase 1</span>
+            <strong>Landing de validación</strong>
+            <p>Web estática profesional que explica el producto y sirve como pieza de portfolio.</p>
+          </li>
+          <li>
+            <span>Fase 2</span>
+            <strong>Demo pseudo-3D</strong>
+            <p>Interacción visual con hotspots, selector de color y narrativa del coche ficticio.</p>
+          </li>
+          <li>
+            <span>Fase 3</span>
+            <strong>Métricas simuladas o locales</strong>
+            <p>Eventos básicos en JavaScript para mostrar qué mediría una empresa.</p>
+          </li>
+          <li>
+            <span>Fase 4</span>
+            <strong>Exploración Three.js</strong>
+            <p>Solo si la demo está clara. Integración 3D real con alcance limitado.</p>
+          </li>
+        </ol>
+      </div>
+
+      <div id="stack" class="stack-card reveal">
+        <p class="eyebrow">Stack técnico inicial</p>
+        <h2>Simple, controlable y defendible.</h2>
+
+        <div class="tech-list">
+          <span>HTML semántico</span>
+          <span>CSS responsive</span>
+          <span>JavaScript vanilla</span>
+          <span>Assets locales</span>
+          <span>Sin backend</span>
+          <span>Sin frameworks</span>
+        </div>
+
+        <p class="stack-note">
+          Esta decisión reduce complejidad y permite centrar el proyecto en UX, narrativa,
+          dirección visual y claridad de producto.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="demo" class="section final-cta reveal">
+      <p class="eyebrow">Siguiente paso</p>
+      <h2>Primero validar la historia. Después construir la demo.</h2>
+      <p>
+        Esta primera landing debe funcionar como centro del proyecto: explicar el problema,
+        vender la solución y preparar el terreno para una experiencia interactiva más avanzada.
+      </p>
+
+      <div class="cta-box">
+        <div>
+          <strong>Demo futura</strong>
+          <span>Explorador interactivo para un coche compacto premium ficticio.</span>
+        </div>
+        <a class="button button-primary" href="mailto:contacto@launch3d.studio">Solicitar acceso a la demo</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 Launch3D Studio · Proyecto de portfolio</span>
+    <a href="#top">Volver arriba</a>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

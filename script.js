@@ -59,20 +59,19 @@ function showToast(message) {
 }
 
 /**
- * Cambia el color del coche pseudo-3D.
- * En una fase posterior esto podría conectarse a un modelo 3D real.
+ * Cambia la muestra visual del coche pseudo-3D.
  */
 function setCarColor(color) {
   document.body.classList.remove(...carColorClasses);
 
   if (color === "electric") {
     document.body.classList.add("car-electric");
-    showToast("Color seleccionado: azul eléctrico. Evento medible: color_changed.");
+    showToast("Muestra visual: azul eléctrico.");
   } else if (color === "bronze") {
     document.body.classList.add("car-bronze");
-    showToast("Color seleccionado: bronce. Evento medible: color_changed.");
+    showToast("Muestra visual: bronce.");
   } else {
-    showToast("Color seleccionado: grafito. Evento medible: color_changed.");
+    showToast("Muestra visual: grafito.");
   }
 
   colorButtons.forEach((button) => {
@@ -128,7 +127,7 @@ function initEvents() {
   hotspotButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const label = button.dataset.hotspot || "Hotspot";
-      showToast(`${label}. Evento medible: hotspot_viewed.`);
+      showToast(label);
     });
   });
 

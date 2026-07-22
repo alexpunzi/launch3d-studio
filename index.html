@@ -1,506 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-  
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-
-  <title>Launch3D Studio | Visualización 3D de producto</title>
-
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Launch3D Studio | Renders 3D de producto</title>
+  <meta name="description" content="Renders 3D de producto para web, redes sociales y presentaciones. Servicio inicial para productos sencillos desde Alicante y en remoto.">
+  <link rel="canonical" href="https://launch3d-studio.netlify.app/">
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <meta name="theme-color" content="#f4f1eb">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Launch3D Studio">
+  <meta property="og:title" content="Launch3D Studio | Renders 3D de producto">
+  <meta property="og:description" content="Renders 3D de producto para web, redes sociales y presentaciones, desde Alicante y en remoto.">
+  <meta property="og:url" content="https://launch3d-studio.netlify.app/">
+  <meta property="og:image" content="https://launch3d-studio.netlify.app/assets/images/urban-pulse-gt-mvp.webp">
+  <meta property="og:image:alt" content="Render 3D del vehículo conceptual Urban Pulse GT">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Launch3D Studio | Renders 3D de producto">
+  <meta name="twitter:description" content="Visualización 3D de producto para web, redes y presentaciones.">
+  <meta name="twitter:image" content="https://launch3d-studio.netlify.app/assets/images/urban-pulse-gt-mvp.webp">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Launch3D Studio","url":"https://launch3d-studio.netlify.app/","image":"https://launch3d-studio.netlify.app/assets/images/urban-pulse-gt-mvp.webp","description":"Visualización 3D de producto para web, redes sociales y presentaciones.","areaServed":"España","address":{"@type":"PostalAddress","addressLocality":"Alicante","addressCountry":"ES"},"sameAs":["https://www.instagram.com/launch3dstudio/"]}</script>
 </head>
-
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <header class="site-header" data-header>
-    <a class="brand" href="#top" aria-label="Ir al inicio">
-      <span class="brand-mark">
-        <img
-          src="assets/images/launch3d-logo.png"
-          alt="Logotipo de Launch3D Studio"
-          width="1024"
-          height="1024"
-          decoding="async"
-        />
-      </span>
-      <span class="brand-name">Launch3D Studio</span>
-    </a>
-
-    <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" data-nav-toggle>
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <nav class="main-nav" data-nav>
-      <a href="#problem">Enfoque</a>
-      <a href="#solution">Proceso</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#features">Servicios</a>
-      <a href="#roadmap">Evolución</a>
-      <a class="nav-cta" href="#demo">Disponibilidad</a>
-    </nav>
+    <div class="header-inner">
+      <a class="brand" href="#inicio" aria-label="Launch3D Studio, ir al inicio">
+        <img src="assets/images/launch3d-logo.png" alt="" width="44" height="44">
+        <span>Launch3D Studio</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" data-nav-toggle><span class="sr-only">Abrir menú</span><span></span><span></span></button>
+      <nav id="main-nav" class="main-nav" aria-label="Navegación principal" data-nav>
+        <a href="#inicio">Inicio</a><a href="#trabajos">Trabajos</a><a href="#servicio">Servicio</a><a href="#proceso">Proceso</a><a href="#sobre-mi">Sobre mí</a><a href="#contacto">Contacto</a>
+        <a class="button button-small" href="#contacto">Cuéntame tu producto</a>
+      </nav>
+    </div>
   </header>
 
-  <main id="top">
-    <!-- HERO -->
-    <section class="hero section">
-      <div class="hero-content reveal">
-        <p class="eyebrow">Visualización 3D · Blender · Producto digital</p>
-        <h1>Renders de producto para presentar ideas y marcas con más claridad.</h1>
-        <p class="hero-lead">
-          Launch3D Studio crea visuales 3D de producto con modelado, materiales e iluminación de
-          estudio. Un servicio inicial centrado en imágenes claras y cuidadas para portfolio, web y redes.
-        </p>
-
-        <div class="hero-actions">
-          <a class="button button-primary" href="#portfolio">Ver proyectos</a>
-          <a class="button button-secondary" href="#solution">Conocer el proceso</a>
-        </div>
-
-        <div class="hero-proof">
-          <div>
-            <strong>01</strong>
-            <span>Proyecto de portfolio</span>
-          </div>
-          <div>
-            <strong>3D</strong>
-            <span>Modelado y render de producto</span>
-          </div>
-          <div>
-            <strong>MVP</strong>
-            <span>Alcance pequeño y realista</span>
-          </div>
-        </div>
+  <main id="contenido">
+    <section id="inicio" class="hero section">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Visualización 3D de producto</p>
+        <h1>Renders 3D de producto para web, redes y presentaciones</h1>
+        <p class="lead">Creo imágenes 3D de productos sencillos a partir de fotografías, medidas y referencias, trabajando el modelado, los materiales y la iluminación.</p>
+        <div class="actions"><a class="button" href="#contacto">Cuéntame tu producto</a><a class="button button-ghost" href="#trabajos">Ver trabajos</a></div>
+        <p class="meta-line">Alicante <span>·</span> Trabajo en remoto <span>·</span> Proyectos con alcance definido</p>
       </div>
+      <figure class="hero-media reveal">
+        <img src="assets/images/urban-pulse-gt-mvp.webp" alt="Render 3D frontal de Urban Pulse GT, un vehículo conceptual verde" width="960" height="540" fetchpriority="high">
+        <figcaption><span>Urban Pulse GT</span><span>Proyecto personal</span></figcaption>
+      </figure>
+    </section>
 
-      <div class="hero-visual reveal" aria-label="Mockup visual de un render de producto 3D">
-        <div class="product-stage">
-          <div class="stage-glow"></div>
-
-          <div class="car-card">
-            <div class="car-topbar">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-
-            <div class="pseudo-3d-car" data-car>
-              <div class="car-body"></div>
-              <div class="car-roof"></div>
-              <div class="car-window"></div>
-              <div class="car-light car-light-left"></div>
-              <div class="car-light car-light-right"></div>
-              <div class="wheel wheel-left"></div>
-              <div class="wheel wheel-right"></div>
-              <button class="hotspot hotspot-1" type="button" data-hotspot="Diseño frontal">+</button>
-              <button class="hotspot hotspot-2" type="button" data-hotspot="Materiales de estudio">+</button>
-              <button class="hotspot hotspot-3" type="button" data-hotspot="Detalles del modelo">+</button>
-            </div>
-
-            <div class="config-panel">
-              <span>Estudio de materiales</span>
-              <div class="color-options" aria-label="Muestras visuales de material">
-                <button class="color-dot is-active" type="button" aria-label="Color grafito" data-color="graphite"></button>
-                <button class="color-dot" type="button" aria-label="Color azul eléctrico" data-color="electric"></button>
-                <button class="color-dot" type="button" aria-label="Color bronce" data-color="bronze"></button>
-              </div>
-            </div>
-          </div>
-
-          <div class="floating-panel panel-left">
-            <span class="metric-value">Blender</span>
-            <span class="metric-label">modelado y materiales</span>
-          </div>
-
-          <div class="floating-panel panel-right">
-            <span class="metric-value">WIP</span>
-            <span class="metric-label">proyecto en progreso</span>
-          </div>
-        </div>
+    <section id="servicio" class="section">
+      <div class="section-heading reveal"><p class="eyebrow">El servicio</p><h2>Visualización 3D de producto</h2><p>Una imagen 3D permite presentar un producto incluso cuando todavía no existe una sesión fotográfica o se necesitan nuevas vistas, fondos y composiciones.</p></div>
+      <div class="card-grid three">
+        <article class="card reveal"><span class="card-number">01</span><h3>Web y tienda online</h3><p>Imágenes limpias para presentar el producto, sus materiales y sus principales detalles.</p></article>
+        <article class="card reveal"><span class="card-number">02</span><h3>Redes sociales</h3><p>Composiciones visuales adaptadas a publicaciones, campañas pequeñas y contenido de marca.</p></article>
+        <article class="card reveal"><span class="card-number">03</span><h3>Presentaciones</h3><p>Renders para propuestas, portfolios, dosieres y presentaciones de producto.</p></article>
       </div>
     </section>
 
-    <!-- PROBLEM -->
-    <section id="problem" class="section split-section">
-      <div class="section-copy reveal">
-        <p class="eyebrow">El enfoque</p>
-        <h2>Una buena imagen ayuda a entender un producto antes de que exista.</h2>
-      </div>
+    <section class="section offer-section">
+      <div class="offer-copy reveal"><p class="eyebrow">Una forma sencilla de empezar</p><h2>Paquete de lanzamiento</h2><p class="price">Desde 99 €</p><p>Una opción inicial para productos de geometría sencilla y proyectos con un alcance concreto.</p><a class="button" href="#contacto">Consultar mi producto</a></div>
+      <div class="offer-details reveal"><h3>Qué incluye</h3><ul class="check-list"><li>3 renders del mismo producto.</li><li>Modelado 3D de un producto sencillo.</li><li>Una configuración visual o escenario sencillo.</li><li>Materiales e iluminación.</li><li>Resolución adecuada para web y redes sociales.</li><li>Una ronda de ajustes menores.</li><li>Entrega en formatos digitales habituales.</li></ul><p class="notice">El precio final depende de la complejidad del producto y del material de referencia disponible. El proyecto se revisa antes de confirmar el encargo.</p></div>
+    </section>
 
-      <div class="problem-grid reveal">
-        <article class="problem-card">
-          <span class="card-index">01</span>
-          <h3>Producto aún en desarrollo</h3>
-          <p>
-            Cuando no hay sesión de fotos o el producto aún es un prototipo, cuesta comunicar
-            su forma, materiales y personalidad de manera atractiva.
-          </p>
-        </article>
-
-        <article class="problem-card">
-          <span class="card-index">02</span>
-          <h3>Visuales poco consistentes</h3>
-          <p>
-            Las imágenes improvisadas pueden hacer que una idea sólida se perciba como algo
-            inacabado, especialmente en web, redes o una presentación.
-          </p>
-        </article>
-
-        <article class="problem-card">
-          <span class="card-index">03</span>
-          <h3>Necesidad de explicar mejor</h3>
-          <p>
-            Un render de estudio permite destacar detalles, acabados y proporciones sin depender
-            todavía de una producción fotográfica compleja.
-          </p>
-        </article>
+    <section class="section fit-section">
+      <div class="section-heading reveal"><p class="eyebrow">Alcance realista</p><h2>¿Qué tipo de proyecto encaja?</h2><p>Definir los límites desde el principio permite trabajar con claridad y centrar el esfuerzo en un resultado cuidado.</p></div>
+      <div class="fit-grid">
+        <article class="fit-card fit-yes reveal"><h3>Adecuado actualmente</h3><ul><li>Envases y botellas sencillas.</li><li>Cosmética y pequeños productos.</li><li>Accesorios de escritorio.</li><li>Objetos decorativos.</li><li>Productos con formas geométricas claras.</li><li>Variaciones sencillas de color o material, previa valoración.</li></ul></article>
+        <article class="fit-card reveal"><h3>Fuera del servicio actual</h3><ul><li>Personajes.</li><li>Animaciones profesionales.</li><li>Simulaciones de líquidos o tejidos.</li><li>Escenarios muy complejos.</li><li>Productos orgánicos de alta complejidad.</li><li>Configuradores interactivos.</li><li>Producciones publicitarias de gran escala.</li></ul></article>
       </div>
     </section>
 
-    <!-- SOLUTION -->
-    <section id="solution" class="section solution-section">
-      <div class="section-header reveal">
-        <p class="eyebrow">Proceso inicial</p>
-        <h2>Visuales 3D bien resueltos, con un proceso simple.</h2>
-        <p>
-          Cada proyecto empieza con una referencia clara y termina con renders preparados para
-          comunicar el producto de forma profesional.
-        </p>
-      </div>
-
-      <div class="solution-flow reveal">
-        <div class="flow-step">
-          <span>Definir</span>
-          <p>Referencias, medidas y el estilo visual que necesita el producto.</p>
-        </div>
-        <div class="flow-line"></div>
-        <div class="flow-step">
-          <span>Modelar</span>
-          <p>Construcción 3D del objeto con foco en las formas visibles.</p>
-        </div>
-        <div class="flow-line"></div>
-        <div class="flow-step">
-          <span>Iluminar</span>
-          <p>Materiales y escena de estudio para dar claridad y carácter al render.</p>
-        </div>
-        <div class="flow-line"></div>
-        <div class="flow-step">
-          <span>Entregar</span>
-          <p>Imágenes finales listas para web, redes o una presentación de proyecto.</p>
-        </div>
+    <section id="trabajos" class="section work-section">
+      <div class="section-heading reveal"><p class="eyebrow">Trabajos seleccionados</p><h2>Proyectos 3D personales y académicos</h2><p>Una selección real del trabajo desarrollado hasta ahora en modelado, materiales, iluminación y composición.</p></div>
+      <div class="projects">
+        <article class="project project-featured reveal"><a class="project-image" href="assets/images/urban-pulse-gt-mvp.webp" target="_blank" rel="noopener"><img src="assets/images/urban-pulse-gt-mvp.webp" alt="Render del vehículo conceptual Urban Pulse GT en color verde" width="960" height="540" loading="lazy"></a><div class="project-copy"><p class="project-type">Proyecto personal</p><h3>Urban Pulse GT</h3><p>Concepto de vehículo urbano creado para explorar una presentación de producto clara mediante modelado, materiales e iluminación de estudio.</p><p class="project-learning"><strong>Objetivo:</strong> desarrollar una pieza completa desde el modelado hasta el render final.</p><p class="tools">Blender · Modelado · Materiales</p></div></article>
+        <article class="project reveal"><a class="project-image" href="assets/images/portfolio/lego-minecraft/lego-minecraft-interior.webp" target="_blank" rel="noopener"><img src="assets/images/portfolio/lego-minecraft/lego-minecraft-interior.webp" alt="Recreación 3D de un set LEGO Minecraft con escena interior" width="1920" height="1080" loading="lazy"></a><div class="project-copy"><p class="project-type">Proyecto académico</p><h3>Set LEGO Minecraft</h3><p>Recreación de un set con estructura exterior y micromundo interior, construido a partir de formas modulares.</p><p class="project-learning"><strong>Objetivo:</strong> aprender organización de escenas complejas, modelado modular e iluminación.</p><p class="tools">Blender · Modelado modular · Render</p></div><div class="gallery"><a href="assets/images/portfolio/lego-minecraft/lego-minecraft-frontal.webp" target="_blank" rel="noopener"><img src="assets/images/portfolio/lego-minecraft/lego-minecraft-frontal.webp" alt="Vista frontal del set LEGO Minecraft" width="1920" height="1080" loading="lazy"></a><a href="assets/images/portfolio/lego-minecraft/lego-minecraft-lateral.webp" target="_blank" rel="noopener"><img src="assets/images/portfolio/lego-minecraft/lego-minecraft-lateral.webp" alt="Vista lateral del set LEGO Minecraft" width="1920" height="1080" loading="lazy"></a><a href="assets/images/portfolio/lego-minecraft/lego-minecraft-transparencia.webp" target="_blank" rel="noopener"><img src="assets/images/portfolio/lego-minecraft/lego-minecraft-transparencia.webp" alt="Vista transparente del set LEGO Minecraft" width="1920" height="1080" loading="lazy"></a></div></article>
+        <article class="project reveal"><a class="project-image" href="assets/images/portfolio/robot-atlas/robot-atlas-principal.webp" target="_blank" rel="noopener"><img src="assets/images/portfolio/robot-atlas/robot-atlas-principal.webp" alt="Robot Atlas modelado y renderizado en un estudio blanco" width="1920" height="1080" loading="lazy"></a><div class="project-copy"><p class="project-type">Proyecto académico</p><h3>Robot Atlas</h3><p>Robot humanoide construido por piezas, con materiales reflectantes y una escena de iluminación sencilla.</p><p class="project-learning"><strong>Objetivo:</strong> trabajar articulaciones, jerarquía de piezas y respuesta de materiales a la luz.</p><p class="tools">Blender · Modelado · Materiales</p></div><div class="gallery single"><a href="assets/images/portfolio/robot-atlas/robot-atlas-estructura.webp" target="_blank" rel="noopener"><img src="assets/images/portfolio/robot-atlas/robot-atlas-estructura.webp" alt="Vista semitransparente de la estructura articulada de Robot Atlas" width="1920" height="1080" loading="lazy"></a></div></article>
       </div>
     </section>
 
-    <!-- PORTFOLIO -->
-    <section id="portfolio" class="section portfolio-section">
-      <div class="section-header reveal">
-        <p class="eyebrow">Portfolio</p>
-        <h2>Proyectos 3D y digitales desarrollados durante mi formación.</h2>
-        <p>
-          Una selección de trabajos personales y universitarios que muestran modelado,
-          materiales, iluminación, animación y desarrollo web.
-        </p>
-      </div>
+    <section id="proceso" class="section process-section">
+      <div class="section-heading reveal"><p class="eyebrow">De la referencia a la imagen</p><h2>Cómo trabajaremos</h2></div>
+      <ol class="process-grid"><li class="reveal"><span>01</span><h3>Referencias</h3><p>Me envías fotografías, medidas aproximadas, materiales y el uso previsto de las imágenes.</p></li><li class="reveal"><span>02</span><h3>Valoración</h3><p>Reviso la complejidad del producto y confirmamos el alcance antes de comenzar.</p></li><li class="reveal"><span>03</span><h3>Producción</h3><p>Creo el modelo, preparo los materiales, planteo la iluminación y genero las vistas acordadas.</p></li><li class="reveal"><span>04</span><h3>Revisión y entrega</h3><p>Recibes una primera versión, realizamos los ajustes incluidos y preparo los archivos finales.</p></li></ol>
+    </section>
 
-      <div class="portfolio-list">
-        <article class="project-card project-card-featured reveal">
-          <a class="project-cover" href="assets/images/urban-pulse-gt-mvp.webp" target="_blank" rel="noopener">
-            <img
-              src="assets/images/urban-pulse-gt-mvp.webp"
-              alt="Urban Pulse GT, concepto de vehículo urbano modelado y renderizado en Blender"
-              width="960"
-              height="540"
-              loading="lazy"
-              decoding="async"
-            />
-          </a>
-          <div class="project-copy">
-            <p class="project-status">Proyecto personal · En progreso</p>
-            <h3>Urban Pulse GT</h3>
-            <p>
-              Concepto de vehículo urbano creado como primer proyecto de Launch3D Studio.
-              Explora modelado 3D, materiales, iluminación de estudio y presentación digital de producto.
-            </p>
-            <div class="project-tags">
-              <span>Blender</span><span>Automoción</span><span>Product render</span>
-            </div>
-          </div>
-        </article>
+    <section id="sobre-mi" class="section about-section">
+      <div class="about-visual reveal"><img src="assets/images/portfolio/lego-minecraft/lego-minecraft-lateral.webp" alt="Detalle lateral del proyecto 3D Set LEGO Minecraft" width="1920" height="1080" loading="lazy"></div>
+      <div class="about-copy reveal"><p class="eyebrow">Sobre mí</p><h2>Launch3D Studio es mi proyecto de visualización 3D de producto</h2><p>Soy estudiante de Ingeniería Multimedia en Alicante y estoy desarrollando Launch3D Studio como mi proyecto de visualización 3D de producto.</p><p>Después de trabajar con Blender en proyectos académicos y personales, estoy comenzando a colaborar en encargos pequeños con un alcance claro y una comunicación directa.</p><p>Mi objetivo actual es ayudar a marcas y profesionales que necesiten imágenes 3D sencillas para presentar sus productos.</p></div>
+    </section>
 
-        <article class="project-card reveal">
-          <a class="project-cover" href="assets/images/portfolio/robot-atlas/robot-atlas-principal.webp" target="_blank" rel="noopener">
-            <img
-              src="assets/images/portfolio/robot-atlas/robot-atlas-principal.webp"
-              alt="Robot Atlas, personaje robótico articulado modelado y renderizado en Blender"
-              width="1920"
-              height="1080"
-              loading="lazy"
-              decoding="async"
-            />
-          </a>
-          <div class="project-copy">
-            <p class="project-status">Proyecto universitario · 2025–2026</p>
-            <h3>Robot Atlas</h3>
-            <p>
-              Robot humanoide construido por piezas, con materiales reflectantes, iluminación de escena
-              y dos pruebas de animación: ciclo de andar y gesto de saludo.
-            </p>
-            <div class="project-tags">
-              <span>Modelado</span><span>Materiales</span><span>Animación</span>
-            </div>
-            <a class="project-link" href="assets/documents/robot-atlas.pdf" target="_blank" rel="noopener">Ver documentación PDF ↗</a>
-          </div>
-          <div class="project-gallery project-gallery-robot">
-            <a href="assets/images/portfolio/robot-atlas/robot-atlas-estructura.webp" target="_blank" rel="noopener">
-              <img src="assets/images/portfolio/robot-atlas/robot-atlas-estructura.webp" alt="Vista semitransparente de la estructura del Robot Atlas" width="1920" height="1080" loading="lazy" decoding="async" />
-            </a>
-            <video controls preload="metadata" poster="assets/images/portfolio/robot-atlas/robot-atlas-principal.webp">
-              <source src="assets/videos/robot-atlas/animacion-andar.mkv" type="video/x-matroska" />
-              Tu navegador no reproduce este formato. <a href="assets/videos/robot-atlas/animacion-andar.mkv">Descargar animación de andar</a>.
-            </video>
-            <video controls preload="metadata" poster="assets/images/portfolio/robot-atlas/robot-atlas-principal.webp">
-              <source src="assets/videos/robot-atlas/animacion-saludar.mkv" type="video/x-matroska" />
-              Tu navegador no reproduce este formato. <a href="assets/videos/robot-atlas/animacion-saludar.mkv">Descargar animación de saludo</a>.
-            </video>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <a class="project-cover" href="assets/images/portfolio/lego-minecraft/lego-minecraft-interior.webp" target="_blank" rel="noopener">
-            <img
-              src="assets/images/portfolio/lego-minecraft/lego-minecraft-interior.webp"
-              alt="Recreación 3D de un set LEGO Minecraft con micromundo interior"
-              width="1920"
-              height="1080"
-              loading="lazy"
-              decoding="async"
-            />
-          </a>
-          <div class="project-copy">
-            <p class="project-status">Proyecto universitario · 2025–2026</p>
-            <h3>Set LEGO Minecraft</h3>
-            <p>
-              Recreación en Blender de un set con estructura exterior y micromundo interior.
-              El trabajo combina modelado modular, organización de escena, materiales e iluminación.
-            </p>
-            <div class="project-tags">
-              <span>Modelado modular</span><span>Escena 3D</span><span>Render</span>
-            </div>
-            <a class="project-link" href="assets/documents/lego-minecraft.pdf" target="_blank" rel="noopener">Ver documentación PDF ↗</a>
-          </div>
-          <div class="project-gallery">
-            <a href="assets/images/portfolio/lego-minecraft/lego-minecraft-frontal.webp" target="_blank" rel="noopener"><img src="assets/images/portfolio/lego-minecraft/lego-minecraft-frontal.webp" alt="Vista frontal del set LEGO Minecraft recreado en Blender" width="1920" height="1080" loading="lazy" decoding="async" /></a>
-            <a href="assets/images/portfolio/lego-minecraft/lego-minecraft-lateral.webp" target="_blank" rel="noopener"><img src="assets/images/portfolio/lego-minecraft/lego-minecraft-lateral.webp" alt="Vista lateral del set LEGO Minecraft recreado en Blender" width="1920" height="1080" loading="lazy" decoding="async" /></a>
-            <a href="assets/images/portfolio/lego-minecraft/lego-minecraft-transparencia.webp" target="_blank" rel="noopener"><img src="assets/images/portfolio/lego-minecraft/lego-minecraft-transparencia.webp" alt="Vista transparente del set LEGO Minecraft y su escena interior" width="1920" height="1080" loading="lazy" decoding="async" /></a>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <a class="project-cover" href="assets/images/portfolio/mundial-2026/mundial-agenda.png" target="_blank" rel="noopener">
-            <img
-              src="assets/images/portfolio/mundial-2026/mundial-agenda.png"
-              alt="Interfaz web de la aplicación Mundial 2026 con agenda de partidos"
-              width="1837"
-              height="875"
-              loading="lazy"
-              decoding="async"
-            />
-          </a>
-          <div class="project-copy">
-            <p class="project-status">Proyecto universitario · Desarrollo web</p>
-            <h3>Mundial 2026 API Web</h3>
-            <p>
-              Aplicación full-stack con cliente en HTML, CSS y JavaScript, API REST en PHP y base de datos MySQL.
-              Incluye agenda, selecciones, clasificación por grupos y gestión de partidos.
-            </p>
-            <div class="project-tags">
-              <span>JavaScript</span><span>PHP REST API</span><span>MySQL</span>
-            </div>
-            <div class="project-actions">
-              <a class="project-link" href="https://github.com/alexpunzi/mundial-2026-api-web" target="_blank" rel="noopener">Ver repositorio ↗</a>
-              <a class="project-link" href="assets/documents/mundial-2026-api-web.pdf" target="_blank" rel="noopener">Ver documentación PDF ↗</a>
-            </div>
-          </div>
-          <div class="project-gallery project-gallery-web">
-            <a href="assets/images/portfolio/mundial-2026/mundial-selecciones.png" target="_blank" rel="noopener"><img src="assets/images/portfolio/mundial-2026/mundial-selecciones.png" alt="Pantalla de selecciones de la aplicación Mundial 2026" width="1836" height="878" loading="lazy" decoding="async" /></a>
-            <a href="assets/images/portfolio/mundial-2026/mundial-clasificaciones.png" target="_blank" rel="noopener"><img src="assets/images/portfolio/mundial-2026/mundial-clasificaciones.png" alt="Pantalla de clasificaciones de la aplicación Mundial 2026" width="1841" height="883" loading="lazy" decoding="async" /></a>
-          </div>
-        </article>
+    <section class="section faq-section">
+      <div class="section-heading reveal"><p class="eyebrow">Antes de empezar</p><h2>Preguntas frecuentes</h2></div>
+      <div class="faq-list reveal">
+        <details><summary>¿Qué necesitas para crear el producto?</summary><p>Fotografías desde diferentes ángulos, medidas aproximadas, referencias de materiales y una explicación del uso previsto para los renders.</p></details>
+        <details><summary>¿Todos los productos cuestan 99 €?</summary><p>No. Los 99 € corresponden al precio de lanzamiento para productos sencillos. Antes de empezar reviso las referencias y confirmo si el producto entra dentro de ese alcance.</p></details>
+        <details><summary>¿Puedo pedir cambios?</summary><p>El paquete incluye una ronda de ajustes menores. Los cambios importantes de diseño, modelado o dirección visual deben valorarse aparte.</p></details>
+        <details><summary>¿Trabajas únicamente en Alicante?</summary><p>No. El servicio puede realizarse completamente en remoto mediante fotografías, medidas y referencias.</p></details>
+        <details><summary>¿Realizas animaciones?</summary><p>Actualmente el servicio está centrado en imágenes estáticas de producto. Las animaciones profesionales no están incluidas.</p></details>
       </div>
     </section>
 
-    <!-- FEATURES -->
-    <section id="features" class="section">
-      <div class="section-header reveal">
-        <p class="eyebrow">Servicios iniciales</p>
-        <h2>Lo que puedo ofrecer hoy, con un alcance claro.</h2>
-        <p>
-          Trabajo con proyectos pequeños y referencias claras. El objetivo es entregar visuales
-          de producto cuidados, no prometer una producción que todavía no puedo asumir.
-        </p>
-      </div>
-
-      <div class="feature-grid">
-        <article class="feature-card reveal">
-          <div class="feature-icon">3D</div>
-          <h3>Render de producto</h3>
-          <p>
-            Una imagen principal de producto con modelado básico, materiales e iluminación de estudio.
-          </p>
-        </article>
-
-        <article class="feature-card reveal">
-          <div class="feature-icon">02</div>
-          <h3>Varias vistas</h3>
-          <p>
-            Diferentes ángulos y detalles para explicar mejor la forma y los acabados del objeto.
-          </p>
-        </article>
-
-        <article class="feature-card reveal">
-          <div class="feature-icon">03</div>
-          <h3>Materiales y acabados</h3>
-          <p>
-            Ajustes de color, metal, plástico o cristal basados en referencias proporcionadas.
-          </p>
-        </article>
-
-        <article class="feature-card reveal">
-          <div class="feature-icon">04</div>
-          <h3>Entrega digital</h3>
-          <p>
-            Archivos optimizados para portfolio, web, redes sociales o una presentación de marca.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <!-- METRICS -->
-    <section id="metrics" class="section metrics-section">
-      <div class="section-copy reveal">
-        <p class="eyebrow">Precio de lanzamiento</p>
-        <h2>3 renders de producto por 99 €.</h2>
-        <p>
-          Una tarifa de inicio para productos sencillos y referencias claras. El alcance se acuerda
-          antes de empezar para que el resultado y el presupuesto sean realistas.
-        </p>
-      </div>
-
-      <div class="metrics-dashboard reveal">
-        <div class="dashboard-top">
-          <span>Starter render pack</span>
-          <span>99 €</span>
-        </div>
-
-        <div class="metric-row">
-          <span>Renders finales</span>
-          <strong>03</strong>
-        </div>
-        <div class="metric-bar">
-          <span style="width: 75%"></span>
-        </div>
-
-        <div class="metric-row">
-          <span>Producto principal</span>
-          <strong>01</strong>
-        </div>
-        <div class="metric-bar">
-          <span style="width: 34%"></span>
-        </div>
-
-        <div class="metric-row">
-          <span>Ronda de ajustes</span>
-          <strong>01</strong>
-        </div>
-        <div class="metric-bar">
-          <span style="width: 34%"></span>
-        </div>
-
-        <div class="dashboard-note">
-          Incluye un producto sencillo, tres vistas finales y una ronda de ajustes. Para objetos más
-          complejos o encargos con más imágenes, preparo un presupuesto personalizado.
-        </div>
-      </div>
-    </section>
-
-    <!-- ROADMAP + STACK -->
-    <section id="roadmap" class="section roadmap-stack-section">
-      <div class="roadmap reveal">
-        <p class="eyebrow">Evolución del estudio</p>
-        <h2>Aprender, mostrar y mejorar proyecto a proyecto.</h2>
-
-        <ol class="timeline">
-          <li>
-            <span>Fase 1</span>
-            <strong>Portfolio claro</strong>
-            <p>Una web sencilla que muestra los trabajos realizados y el tipo de visuales que puedo crear.</p>
-          </li>
-          <li>
-            <span>Fase 2</span>
-            <strong>Renders de producto</strong>
-            <p>Practicar modelado, materiales, iluminación y composición con objetos de complejidad asumible.</p>
-          </li>
-          <li>
-            <span>Fase 3</span>
-            <strong>Primeros encargos pequeños</strong>
-            <p>Aplicar el proceso a productos sencillos, con referencias y un alcance cerrado.</p>
-          </li>
-          <li>
-            <span>Fase 4</span>
-            <strong>Nuevas capacidades</strong>
-            <p>Ampliar a animación o experiencias interactivas solo cuando la práctica y los proyectos lo permitan.</p>
-          </li>
-        </ol>
-      </div>
-
-      <div id="stack" class="stack-card reveal">
-        <p class="eyebrow">Stack técnico inicial</p>
-        <h2>Simple, controlable y defendible.</h2>
-
-        <div class="tech-list">
-          <span>HTML semántico</span>
-          <span>CSS responsive</span>
-          <span>JavaScript vanilla</span>
-          <span>Assets locales</span>
-          <span>Sin backend</span>
-          <span>Sin frameworks</span>
-        </div>
-
-        <p class="stack-note">
-          Esta decisión reduce complejidad y permite centrar el proyecto en UX, narrativa,
-          dirección visual y claridad de producto.
-        </p>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section id="demo" class="section final-cta reveal">
-      <p class="eyebrow">Disponibilidad</p>
-      <h2>Abierto a proyectos pequeños de visualización de producto.</h2>
-      <p>
-        Si tienes un objeto, una idea o un producto sencillo que necesite imágenes 3D, podemos
-        definir un encargo concreto a partir de tus referencias.
-      </p>
-
-      <div class="cta-box">
-        <div>
-          <strong>Paquete inicial · 99 €</strong>
-          <span>3 renders de producto para web, redes, portfolio o presentaciones.</span>
-        </div>
-        <a class="button button-primary" href="#portfolio">Ver portfolio</a>
-      </div>
+    <section id="contacto" class="section contact-section reveal">
+      <p class="eyebrow">Hablemos</p><h2>Cuéntame qué producto quieres visualizar</h2><p>Envíame algunas fotografías o referencias y una breve explicación del proyecto. Revisaré si encaja con el servicio y te responderé con una valoración inicial.</p><a class="button button-light" href="https://www.instagram.com/launch3dstudio/" target="_blank" rel="noopener">Escribir por Instagram <span aria-hidden="true">↗</span></a><p class="contact-note">@launch3dstudio · Sin compromiso</p>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <span>© 2026 Launch3D Studio · Proyecto de portfolio</span>
-    <a href="#top">Volver arriba</a>
-  </footer>
-
-  <div class="toast" role="status" aria-live="polite" data-toast></div>
-
-  <script src="script.js"></script>
+  <footer class="site-footer"><div><strong>Launch3D Studio</strong><span>Visualización 3D de producto</span></div><div class="footer-meta"><a href="https://www.instagram.com/launch3dstudio/" target="_blank" rel="noopener">Instagram</a><span>Alicante · Trabajo en remoto</span><span>© <span data-year></span> Launch3D Studio</span></div></footer>
+  <script src="script.js" defer></script>
 </body>
 </html>

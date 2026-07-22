@@ -13,7 +13,7 @@ function setMenu(open, { restoreFocus = false } = {}) {
   const shouldOpen = Boolean(open && mobileQuery.matches);
   nav.classList.toggle("is-open", shouldOpen);
   toggle.setAttribute("aria-expanded", String(shouldOpen));
-  if (toggleLabel) toggleLabel.textContent = shouldOpen ? "Cerrar menú" : "Abrir menú";
+  if (toggleLabel) toggleLabel.textContent = shouldOpen ? "Close menu" : "Open menu";
   document.body.classList.toggle("menu-open", shouldOpen);
 
   if (shouldOpen) {
@@ -60,3 +60,20 @@ else {
 }
 
 document.querySelector("[data-year]").textContent = new Date().getFullYear();
+
+const header = document.querySelector("[data-header]");
+const progress = document.querySelector("[data-progress]");
+let scrollFrame = null;
+
+function updateScrollUI() {
+  const scrollTop = window.scrollY;
+  const scrollRange = document.documentElement.scrollHeight - window.innerHeight;
+  header?.classList.toggle("is-scrolled", scrollTop > 24);
+  if (progress) progress.style.transform = `scaleX(${scrollRange > 0 ? Math.min(scrollTop / scrollRange, 1) : 0})`;
+  scrollFrame = null;
+}
+
+window.addEventListener("scroll", () => {
+  if (scrollFrame === null) scrollFrame = window.requestAnimationFrame(updateScrollUI);
+}, { passive: true });
+updateScrollUI();

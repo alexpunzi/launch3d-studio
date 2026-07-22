@@ -1,27 +1,62 @@
 const nav = document.querySelector("[data-nav]");
 const toggle = document.querySelector("[data-nav-toggle]");
-const toggleLabel = toggle?.querySelector(".sr-only");
+const toggleLabel = document.querySelector("[data-nav-label]");
+const mobileQuery = window.matchMedia("(max-width: 760px)");
+let lastFocused = null;
 
-function setMenu(open) {
-  nav?.classList.toggle("is-open", open);
-  toggle?.setAttribute("aria-expanded", String(open));
-  if (toggleLabel) toggleLabel.textContent = open ? "Cerrar menú" : "Abrir menú";
-  document.body.classList.toggle("menu-open", open);
+function focusableMenuItems() {
+  return nav ? [...nav.querySelectorAll("a[href]")] : [];
 }
 
-toggle?.addEventListener("click", () => setMenu(toggle.getAttribute("aria-expanded") !== "true"));
-nav?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setMenu(false)));
-document.addEventListener("keydown", (event) => { if (event.key === "Escape") { setMenu(false); toggle?.focus(); } });
-document.addEventListener("click", (event) => { if (nav?.classList.contains("is-open") && !nav.contains(event.target) && !toggle.contains(event.target)) setMenu(false); });
+function setMenu(open, { restoreFocus = false } = {}) {
+  if (!nav || !toggle) return;
+  const shouldOpen = Boolean(open && mobileQuery.matches);
+  nav.classList.toggle("is-open", shouldOpen);
+  toggle.setAttribute("aria-expanded", String(shouldOpen));
+  if (toggleLabel) toggleLabel.textContent = shouldOpen ? "Cerrar menú" : "Abrir menú";
+  document.body.classList.toggle("menu-open", shouldOpen);
 
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (shouldOpen) {
+    lastFocused = document.activeElement;
+    focusableMenuItems()[0]?.focus();
+  } else if (restoreFocus && lastFocused instanceof HTMLElement) {
+    lastFocused.focus();
+  }
+}
+
+toggle?.addEventListener("click", (event) => {
+  event.stopPropagation();
+  setMenu(toggle.getAttribute("aria-expanded") !== "true", { restoreFocus: true });
+});
+
+nav?.addEventListener("click", (event) => {
+  if (event.target.closest("a")) setMenu(false);
+});
+
+document.addEventListener("click", (event) => {
+  if (nav?.classList.contains("is-open") && !nav.contains(event.target) && !toggle?.contains(event.target)) setMenu(false, { restoreFocus: true });
+});
+
+document.addEventListener("keydown", (event) => {
+  if (!nav?.classList.contains("is-open")) return;
+  if (event.key === "Escape") { event.preventDefault(); setMenu(false, { restoreFocus: true }); return; }
+  if (event.key !== "Tab") return;
+  const items = [toggle, ...focusableMenuItems()];
+  const first = items[0];
+  const last = items[items.length - 1];
+  if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+  else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+});
+
+mobileQuery.addEventListener("change", () => setMenu(false));
+
 const reveals = document.querySelectorAll(".reveal");
-if (reduceMotion || !("IntersectionObserver" in window)) reveals.forEach((el) => el.classList.add("is-visible"));
+if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) reveals.forEach((item) => item.classList.add("is-visible"));
 else {
   const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
     if (entry.isIntersecting) { entry.target.classList.add("is-visible"); observer.unobserve(entry.target); }
-  }), { threshold: 0.1, rootMargin: "0px 0px -32px" });
-  reveals.forEach((el) => observer.observe(el));
+  }), { threshold: 0.08, rootMargin: "0px 0px -24px" });
+  reveals.forEach((item) => observer.observe(item));
 }
 
 document.querySelector("[data-year]").textContent = new Date().getFullYear();
